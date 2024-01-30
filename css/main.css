@@ -17,6 +17,9 @@ html {
   line-height: 1.4;
 }
 
+* {
+  border: 2px dotted red;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -86,6 +89,77 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+/* ---------------------- Base Header - Footer Styles ----------------------- */
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+header .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+header nav ul {
+  display: flex;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+footer .social-icons {
+  display: flex;
+}
+
+.hero area {
+  display: flex;
+}
+
+aside {
+  display: flex;
+}
+
+.features {
+  display: flex;
+}
+
+.features .features-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.reviews {
+  display: flex;
+}
+
+.mission {
+  display: flex;
+}
+
+.contact-section {
+  display: flex;
+}
+
+.faq {
+  display: flex;
+}
+
+.faq .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
 
 /* ==========================================================================
    Helper classes
