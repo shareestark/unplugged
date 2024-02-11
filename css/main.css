@@ -129,7 +129,7 @@ h4 {
 
 p {
   font-size: 0.875em;
-  line-height: 1.285em;
+  line-height: 1.285;
 }
 
 img {
@@ -139,6 +139,11 @@ img {
 figure {
   margin: 0;
 }
+
+img {
+  border-style: none;
+}
+
 address {
   font-style: normal;
 }
@@ -156,19 +161,19 @@ header {
   background-color: #202322;
 }
 
+header .content-wrapper {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
 .header-divider {
   width: 100%;
   height: 1px;
   margin: 10px 0 20px 0;
   background: #3a3a3a;
-}
-
-header .content-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  margin: 0;
 }
 
 header figure {
@@ -181,6 +186,7 @@ header nav {
   font-weight: 700;
   text-transform: uppercase;
 }
+
 header nav ul {
   display: flex;
   justify-content: space-around;
@@ -213,11 +219,11 @@ footer .contact {
 
 footer .social-icons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
-footer.social-icons p {
+footer .social-icons p {
   background-color: #527158;
   border-radius: 50%;
   width: 40px;
@@ -303,7 +309,7 @@ input[type="button"] {
 }
 
 .features article {
-  width: 63%;
+  width: 90%;
   margin: 30px 0;
 }
 
@@ -327,7 +333,7 @@ input[type="button"] {
 
 .reviews {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: #2a423a;
 }
 
@@ -494,8 +500,7 @@ input[type="button"] {
 @media only screen and (min-width: 768px) {
   /* Tablet styles here */
 
-  /* General styles */
-
+  /* General Styles */
   .content-wrapper {
     max-width: 640px;
     margin: 100px 0;
@@ -511,6 +516,10 @@ input[type="button"] {
     justify-content: space-between;
   }
 
+  header figure {
+    width: 30%;
+  }
+
   header nav {
     width: 20%;
   }
@@ -523,7 +532,17 @@ input[type="button"] {
     display: none;
   }
 
-  /* Hero Area */
+  .hero-area .content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .hero-area h1 {
+    font-size: 2.25em;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1;
+  }
 
   /* Aside */
   aside .content-wrapper {
@@ -540,19 +559,6 @@ input[type="button"] {
   }
 
   /* Features */
-
-  .features {
-    background: url("../img/unplugged-retreat-features.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-  }
-
-  .features h2 {
-    margin-bottom: 60px;
-  }
-
   .features article {
     display: flex;
     align-items: center;
@@ -561,10 +567,11 @@ input[type="button"] {
   }
 
   .features .features-item-description {
-    width: 62%;
+    width: 50%;
   }
 
   /* Reviews */
+
   .reviews article {
     display: flex;
     justify-content: space-between;
@@ -572,6 +579,20 @@ input[type="button"] {
 
   .reviews article div {
     width: 49%;
+  }
+
+  .reviews h2 {
+    margin-bottom: 40px;
+    line-height: 1;
+  }
+
+  .reviews h3 {
+    width: 69%;
+    margin: 0;
+  }
+
+  figure {
+    width: 48%;
   }
 
   /* Footer */
@@ -672,13 +693,42 @@ input[type="button"] {
     .features article {
       flex-basis: 33%;
     }
-
     /* Reviews */
-    .reviews article div {
-      width: 42%;
+
+    .reviews article {
+      justify-content: space-between;
     }
   }
 
+  /* Footer */
+
+  footer .content-wrapper {
+    width: 65%;
+  }
+
+  footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  footer .contact {
+    margin-bottom: 0;
+  }
+
+  footer h4 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+  }
+
+  footer p {
+    line-height: 1.285;
+  }
+
+  footer .copyright {
+    width: 100%;
+  }
   /* ==========================================================================
   About Page
   ========================================================================== */
