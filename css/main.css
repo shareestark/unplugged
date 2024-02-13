@@ -169,15 +169,15 @@ header .content-wrapper {
   flex-flow: row wrap;
 }
 
+header figure {
+  width: 60%;
+}
+
 .header-divider {
   width: 100%;
   height: 1px;
   margin: 10px 0 20px 0;
   background: #3a3a3a;
-}
-
-header figure {
-  width: 60%;
 }
 
 header nav {
@@ -219,7 +219,7 @@ footer .contact {
 
 footer .social-icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -309,7 +309,7 @@ input[type="button"] {
 }
 
 .features article {
-  width: 90%;
+  width: 63%;
   margin: 30px 0;
 }
 
@@ -321,6 +321,7 @@ input[type="button"] {
 .features .features-items {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   flex-flow: row wrap;
 }
 
@@ -506,6 +507,16 @@ input[type="button"] {
     margin: 100px 0;
   }
 
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+  }
+
   /* Header */
   header {
     padding: 33px 0;
@@ -532,16 +543,17 @@ input[type="button"] {
     display: none;
   }
 
-  .hero-area .content-wrapper {
-    display: flex;
-    justify-content: flex-start;
-  }
+  /* Hero Area */
 
+  .hero-area {
+    min-height: 600px;
+  }
   .hero-area h1 {
-    font-size: 2.25em;
+    font-size: 3em;
     font-family: "Poppins", Helvetica, Arial, sans-serif;
     font-weight: 500;
     line-height: 1;
+    margin: 0;
   }
 
   /* Aside */
@@ -567,7 +579,7 @@ input[type="button"] {
   }
 
   .features .features-item-description {
-    width: 50%;
+    width: 62%;
   }
 
   /* Reviews */
@@ -577,6 +589,7 @@ input[type="button"] {
     justify-content: space-between;
   }
 
+  .reviews article figure,
   .reviews article div {
     width: 49%;
   }
@@ -584,15 +597,12 @@ input[type="button"] {
   .reviews h2 {
     margin-bottom: 40px;
     line-height: 1;
+    width: 85%;
   }
 
   .reviews h3 {
-    width: 69%;
+    width: 75%;
     margin: 0;
-  }
-
-  figure {
-    width: 48%;
   }
 
   /* Footer */
@@ -600,14 +610,24 @@ input[type="button"] {
     width: 65%;
   }
 
-  .footer-content {
+  footer .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
   }
 
   footer .contact {
     margin-bottom: 0;
+  }
+
+  footer h4 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+  }
+
+  footer p {
+    line-height: 1.285;
   }
 
   footer .copyright {
@@ -639,6 +659,9 @@ input[type="button"] {
     align-items: flex-start;
   }
 
+  .contact-content h4 {
+    font-size: 1.5em;
+  }
   /* ==========================================================================
    FAQ Page
    ========================================================================== */
@@ -655,6 +678,12 @@ input[type="button"] {
     width: 100%;
   }
 
+  .faq h4,
+  .faq p {
+    font-size: 0.875em;
+    line-height: 1.125;
+  }
+
   @media only screen and (min-width: 1200px) {
     /*Desktop styles here*/
 
@@ -667,6 +696,20 @@ input[type="button"] {
     /* Header */
     header {
       padding: 15px 0;
+    }
+
+    h2 {
+      font-size: 2.25em;
+    }
+
+    h3,
+    h4 {
+      font-size: 1.875em;
+    }
+
+    p {
+      font-size: 1.125em;
+      line-height: 1.333;
     }
 
     /* Hero */
@@ -684,6 +727,10 @@ input[type="button"] {
       width: 30%;
     }
 
+    .form-description p {
+      font-size: 1.125em;
+    }
+
     /* Features */
 
     .features h2 {
@@ -695,8 +742,12 @@ input[type="button"] {
     }
     /* Reviews */
 
-    .reviews article {
-      justify-content: space-between;
+    .reviews h2 {
+      padding-bottom: 50px;
+    }
+
+    .reviews article div {
+      width: 42%;
     }
   }
 
@@ -736,6 +787,11 @@ input[type="button"] {
   .mission h2,
   .contact-section .content-wrapper h2 {
     width: 95%;
+    font-size: 3em;
+  }
+
+  .contact-content h4 {
+    font-size: 1.875em;
   }
 
   /* ==========================================================================
@@ -743,6 +799,13 @@ input[type="button"] {
   ========================================================================== */
   .faq h2 {
     width: 100%;
+    font-size: 3em;
+  }
+
+  .faq h4,
+  .faq p {
+    font-size: 1.125em;
+    line-height: 1;
   }
 }
 
